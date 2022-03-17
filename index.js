@@ -18,5 +18,10 @@ const content = "💕💕💕💕👩‍❤️‍👨👩‍❤️‍👨👩‍
 for(let i = 1;i <= 10;i++){
     fs.writeFile(`./folder/text-${i}`,content,(err)=>{
         console.log(`${i} file created`);
+    });
+
+    fs.readFile(`./folder/text-${i}`, "utf-8",(err,data)=>
+    {
+        console.log(`${data} reading completed from ${i}`);
     })
 }
